@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>雪莉拉科莫多热带之旅 · 一日快艇团</title>
+  <meta name="description" content="探索帕达尔岛、粉红沙滩、科莫多岛、Taka Makasar、魔鬼鱼点与海龟点，一日快艇团。通过 WhatsApp 或邮箱预订。">
+
+  <style>
+    /* --- 基本样式（mobile-first）--- */
+    :root{
+      --accent:#00796b;
+      --sea1:#e8faf8;
+      --sea2:#e0f2f1;
+      --btnWa:#25d366;
+      --btnMail:#ffc107;
+      --maxw:900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans SC", "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#f6fffd 0%, #e8f7f6 100%);
+      color:#0b2b2a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:14px auto;
+      background:#fff;
+      border-radius:14px;
+      padding:14px;
+      box-shadow:0 6px 22px rgba(8,35,34,0.08);
+      overflow:hidden;
+    }
+
+    /* header */
+    .top {
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand {
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .brand img{
+      width:64px;
+      height:64px;
+      border-radius:12px;
+      object-fit:cover;
+      border:3px solid #fff;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+    .brand h1{
+      margin:0;
+      font-size:18px;
+      color:var(--accent);
+    }
+    .lang {
+      font-size:13px;
+    }
+    .lang a{
+      color:#0b2b2a;
+      text-decoration:none;
+      padding:6px 8px;
+      border-radius:8px;
+      margin-left:6px;
+      background:transparent;
+      transition:.15s;
+    }
+    .lang a:hover{ background:var(--sea2); }
+
+    /* desc + CTA */
+    .desc{ margin-top:10px; font-size:14px; color:#3b5b57; }
+    .cta {
+      display:flex;
+      gap:10px;
+      margin-top:12px;
+      flex-direction:column;
+    }
+    .btn {
+      display:block;
+      text-align:center;
+      padding:12px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn-wa{ background:var(--btnWa); color:#fff; }
+    .btn-mail{ background:var(--btnMail); color:#222; }
+
+    .price {
+      margin-top:8px;
+      font-weight:700;
+      color:var(--accent);
+      font-size:16px;
+      text-align:center;
+    }
+
+    /* carousel (mobile-first) */
+    .carousel {
+      position:relative;
+      margin-top:16px;
+      overflow:hidden;
+      border-radius:12px;
+    }
+    .slides {
+      display:flex;
+      transition:transform .35s ease;
+      will-change:transform;
+    }
+    .slide {
+      min-width:100%;
+      padding:12px;
+    }
+    .slide img{
+      width:100%;
+      height:46vh;
+      max-height:420px;
+      object-fit:cover;
+      border-radius:10px;
+      display:block;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+    .caption {
+      margin-top:8px;
+      font-size:14px;
+      color:#234;
+      text-align:left;
+    }
+
+    /* slider nav */
+    .dots{
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      margin-top:10px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: #dfeeee; box-shadow:inset 0 1px rgba(255,255,255,0.5);
+    }
+    .dot.active{ background:var(--accent); }
+
+    /* info box */
+    .info {
+      margin-top:16px;
+      background:var(--sea2);
+      padding:12px;
+      border-radius:8px;
+      font-size:14px;
+      color:#0b2b2a;
+    }
+    .info h3{ margin:4px 0 8px 0; color:var(--accent); font-size:15px; }
+
+    footer{ margin-top:14px; font-size:12px; color:#6a7f7d; text-align:center; padding-bottom:8px; }
+
+    /* responsive adjustments */
+    @media(min-width:720px){
+      .brand img{ width:84px; height:84px; border-radius:14px; }
+      .slide img{ height:58vh; max-height:640px; }
+      .cta { flex-direction:row; }
+      .btn{ width:48%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- header -->
+    <div class="top">
+      <div class="brand">
+        <!-- 替换下面 logo 链接为你的 Direct Image URL -->
+        <img id="logo" src="https://your-image-host.com/boat.jpg" alt="快艇 Logo">
+        <div>
+          <h1>雪莉拉科莫多热带之旅 · 一日快艇团</h1>
+          <div style="font-size:13px;color:#2e5b57;margin-top:6px;">清晨出发 • 舒适快艇 • 小团体验</div>
+        </div>
+      </div>
+
+      <div class="lang" aria-hidden="true">
+        <!-- 语言切换（占位） -->
+        <a href="index.html" style="font-weight:700;">🇨🇳 中文</a>
+        <a href="index-en.html">🇬🇧 English</a>
+      </div>
+    </div>
+
+    <!-- 简短描述 + CTA -->
+    <p class="desc">
+      乘坐快速快艇出发，全天行程包含帕达尔岛、粉红沙滩、科莫多岛、Taka Makasar、魔鬼鱼点与海龟点。行程轻松，适合想拍美照与浮潜的旅客。
+    </p>
+
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/6281338562919" id="waBtn">📱 通过 WhatsApp 预订</a>
+      <a class="btn btn-mail" href="mailto:cheryllakomodotrip@gmail.com">✉️ 通过邮箱预订</a>
+      <div class="price">💰 价格：Rp 1.150.000 / 人</div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel" id="carousel">
+      <div class="slides" id="slides">
+        <!-- Slide 1 — Padar -->
+        <div class="slide">
+          <img id="img-padar" src="https://your-image-host.com/padar_island.jpg" alt="帕达尔岛">
+          <div class="caption"><strong>帕达尔岛</strong> — 徒步登山欣赏壮丽景色 (Trek to see the view)</div>
+        </div>
+
+        <!-- Slide 2 — Pink Beach -->
+        <div class="slide">
+          <img id="img-pink" src="https://your-image-host.com/pink_beach.jpg" alt="粉红沙滩">
+          <div class="caption"><strong>粉红沙滩</strong> — 放松、游泳和拍照 (Relaxing, swimming and photo)</div>
+        </div>
+
+        <!-- Slide 3 — Komodo -->
+        <div class="slide">
+          <img id="img-komodo" src="https://your-image-host.com/komodo.jpg" alt="科莫多岛">
+          <div class="caption"><strong>科莫多岛</strong> — 徒步观赏巨蜥 (Trek to see the dragon)</div>
+        </div>
+
+        <!-- Slide 4 — Taka Makasar -->
+        <div class="slide">
+          <img id="img-taka" src="https://your-image-host.com/taka_makasar.jpg" alt="Taka Makasar">
+          <div class="caption"><strong>Taka Makasar</strong> — 浮潜观赏珊瑚和热带鱼 (Snorkeling to see the corals and fish)</div>
+        </div>
+
+        <!-- Slide 5 — Manta Point -->
+        <div class="slide">
+          <img id="img-manta" src="https://your-image-host.com/manta.jpg" alt="魔鬼鱼点">
+          <div class="caption"><strong>魔鬼鱼点</strong> — 与魔鬼鱼共游（并非每次都能看到）(Swimming with manta, but not guaranteed)</div>
+        </div>
+
+        <!-- Slide 6 — Turtle Point -->
+        <div class="slide">
+          <img id="img-turtle" src="https://your-image-host.com/turtle.jpg" alt="海龟点">
+          <div class="caption"><strong>海龟点</strong> — 与海龟一起游泳，欣赏珊瑚 (Swimming with turtle and see the corals)</div>
+        </div>
+      </div>
+
+      <!-- dots -->
+      <div class="dots" id="dots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+        <div class="dot" data-index="4"></div>
+        <div class="dot" data-index="5"></div>
+      </div>
+    </div>
+
+    <!-- Info section -->
+    <div class="info" role="region" aria-label="行程说明">
+      <h3>🕐 行程说明</h3>
+      <p>从酒店接送至拉布安巴佐码头时间约 <strong>06:30 - 07:00</strong>，返程约 <strong>16:30</strong>。</p>
+
+      <h3>✅ 费用包含</h3>
+      <ul>
+        <li>快艇交通</li>
+        <li>酒店接送（Pick up & drop off）</li>
+        <li>专业导游</li>
+        <li>午餐</li>
+        <li>矿泉水</li>
+        <li>浮潜设备</li>
+        <li>软饮、点心与水果</li>
+      </ul>
+
+      <h3>❌ 费用不包含</h3>
+      <ul>
+        <li>早餐</li>
+        <li>科莫多国家公园门票与巡山员费用</li>
+        <li>机票与酒店</li>
+        <li>个人消费</li>
+      </ul>
+
+      <h3>🎒 建议携带物品</h3>
+      <ul>
+        <li>毛巾</li>
+        <li>徒步鞋 / 登山鞋</li>
+        <li>防晒霜</li>
+        <li>太阳镜与帽子</li>
+        <li>相机或手机（防水壳优先）</li>
+        <li>适量现金</li>
+      </ul>
+    </div>
+
+    <footer>
+      版权所有 © 2025 雪莉拉科莫多热带之旅 · 联系：+62 813 3856 2919 · cheryllakomodotrip@gmail.com
+    </footer>
+  </div>
+
+  <script>
+    /* --- 简单 Carousel 控制（支持触摸滑动）--- */
+    (function(){
+      const slides = document.getElementById('slides');
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      let idx = 0;
+      let startX = null;
+      let currentTranslate = 0;
+
+      function update() {
+        slides.style.transform = "translateX(" + (-idx * 100) + "%)";
+        dots.forEach(d=>d.classList.remove('active'));
+        const activeDot = document.querySelector('.dot[data-index="'+idx+'"]');
+        if(activeDot) activeDot.classList.add('active');
+      }
+
+      // dot click
+      dots.forEach(d => d.addEventListener('click', ()=>{ idx = Number(d.dataset.index); update(); }));
+
+      // touch handlers
+      slides.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      }, {passive:true});
+      slides.addEventListener('touchmove', e => {
+        if(startX === null) return;
+        const dx = e.touches[0].clientX - startX;
+        // small translate for feel (not final)
+        slides.style.transform = "translateX(" + ((-idx * 100) + (dx / window.innerWidth) * 100) + "%)";
+      }, {passive:true});
+      slides.addEventListener('touchend', e => {
+        if(startX === null) return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if(Math.abs(dx) > 50) {
+          if(dx < 0 && idx < slides.children.length -1) idx++;
+          if(dx > 0 && idx > 0) idx--;
+        }
+        startX = null;
+        update();
+      });
+
+      // keyboard support for desktop
+      window.addEventListener('keydown', e => {
+        if(e.key === 'ArrowLeft' && idx>0) idx--;
+        if(e.key === 'ArrowRight' && idx < slides.children.length-1) idx++;
+        update();
+      });
+
+      // initial
+      update();
+    })();
+  </script>
+
+</body>
+  </html>
+  
