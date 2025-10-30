@@ -1,2 +1,2 @@
-# tropical--trip
-Official website for Cherylla Tropical Trip - Komodo Island Tour
+#Tropical trip 
+Official website for Berytripkomodo - Komodo Island Tour
