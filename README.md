@@ -1,2 +1,2 @@
-#Tropical trip 
-Official website for Berytripkomodo - Komodo Island Tour
+
+Official website for funkomodotrip- Komodo Island Tour
